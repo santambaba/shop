@@ -1,0 +1,217 @@
+body{
+  background-color:#010;
+}
+.login-modal {
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 420px;
+    padding:40px;
+    border-radius: 1rem;
+    transform:translate(-50% ,-50%);
+    background: linear-gradient(#006992,#2e1760);
+    box-sizing: border-box;
+    box-shadow: 0 15 ;
+   
+}
+
+.login-box{
+   
+    background:linear-gradient(#006992 , #2e1760);
+    width:300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    
+    text-align: center;
+}
+
+.login-box h2 {
+    margin:0 0 20px;
+    padding:0;
+    color:#fff;
+    text-align:center
+}
+
+.login-box label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #f8f3f3;
+}
+
+.login-box input[type="text"],
+.login-box select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-box button {
+    background-color: #3c4ab3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background-color: #2e8b57;
+}
+.login-modal::after{
+content: '';
+width:100%;
+height:100%;
+background-image: radial-gradient(circle farthest-corner at 10% 20% ,rgba(255,94,247,1) 17.8%,rgba(2,245,255,1) 100.2%);
+filter:blur(15px);
+z-index:-1;
+position:absolute;
+left:0;
+top:0;
+}
+body {
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: #333;
+}
+
+.header {
+    background-color: rgb(45, 112, 174);
+    color: #e4ebec;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    background-color: rgb(45, 112, 174);
+    color: #e4ebec;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li:hover {
+    border-bottom: 2px solid rgba(30, 6, 106, 0.491);
+    transition: linear;
+    color: #141717;
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e4e7dd;
+    color: #333;
+}
+
+.trending, .categories {
+    padding: 20px;
+}
+
+.trending h2 {
+    text-align: center;
+    color: #131412;
+    animation: glowing 1.5s infinite;
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 5px #4e3cb3, 0 0 10px #4e3cb3; }
+    50% { text-shadow: 0 0 20px #2e588b, 0 0 30px #33769e; }
+    100% { text-shadow: 0 0 5px #4e3cb3, 0 0 10px #4e3cb3; }
+}
+
+.products, .category-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.products div {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.category-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-list div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.category-list div img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.products div img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.footer {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+}

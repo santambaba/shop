@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOPASY - Your Online Shopping Destination</title>
+    <link rel="stylesheet" href="shopasy.css">
+    <script src="script.js" defer></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const trendingProducts = [
+                { name: "Wireless Earbuds", img: "https://images.fonearena.com/blog/wp-content/uploads/2021/09/Dizo-GoPods-and-GoPods-Neo.jpg", price: "$29.99" },
+                { name: "Smartwatch", img: "https://m.media-amazon.com/images/I/819DWQLgjKL._AC_SY200_.jpg", price: "$59.99" },
+                { name: "Bluetooth Speaker", img: "https://m.media-amazon.com/images/I/81Dl7qzd40L._AC_UY654_FMwebp_QL65_.jpg", price: "$39.99" }
+            ];
+
+            const categories = [
+                { name: "Electronics", img: "https://tse2.mm.bing.net/th?id=OIP.4mLjyZUBn_bOWJre0ioWMwHaEK&pid=ImgDet&w=153&h=86&c=7", description: "Find the latest gadgets, devices, and accessories to keep you connected." },
+                { name: "Fashion", img: "https://tse2.mm.bing.net/th?id=OIP.RDnbeE1q2NTfaS5QycFPcQHaEK&pid=ImgDet&w=153&h=86&c=7", description: "Discover trendy clothing, shoes, and accessories for every occasion." },
+                { name: "Home & Kitchen", img: "https://tse1.mm.bing.net/th?id=OIP.9uCLSNyUg_5DxmZOfd9wzgHaHa&pid=ImgDet&w=153&h=153&c=7", description: "Explore a variety of home essentials and kitchen appliances." },
+                { name: "Beauty", img: "https://th.bing.com/th/id/OIP.U4IbBsgOHLflZKAN29srCgHaD4?w=343&h=180&c=7&r=0&o=5&dpr=1.4&pid=1.7", description: "Shop for skincare, makeup, and wellness products to look your best." }
+            ];
+
+            const trendingContainer = document.getElementById("trending-products");
+            trendingProducts.forEach(product => {
+                const productDiv = document.createElement("div");
+                productDiv.innerHTML = `
+                <img src="${product.img}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+                `;
+                trendingContainer.appendChild(productDiv);
+            });
+
+            const categoryContainer = document.querySelector(".category-list");
+            categories.forEach(category => {
+                const categoryDiv = document.createElement("div");
+                categoryDiv.innerHTML = `
+                    <img src="${category.img}" alt="${category.name}">
+                    <h3>${category.name}</h3>
+                    <p>${category.description}</p>
+                `;
+                categoryContainer.appendChild(categoryDiv);
+            });
+        });
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html"><h1>SHOPASY</h1></a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#trending">Trending</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1><u>Welcome to SHOPASY!!</u></h1>
+            <p><i>Your one-stop shop for all things trendy and exciting!</i></p>
+        </section>
+
+        <section id="trending" class="trending">
+            <h2><b>Trending Now</b></h2>
+            <div class="products" id="trending-products">
+                <!-- Trending products -->
+            </div>
+        </section>
+
+        <section id="categories" class="categories">
+            <h2>Shop by Categories</h2>
+            <div class="category-list">
+                <!-- Categories -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 SHOPASY by Prathamesh Shelke. All rights reserved.</p>
+    </footer>
+</body>
+</html>
